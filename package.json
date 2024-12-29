@@ -1,0 +1,25 @@
+{
+  "name": "devils-park-server",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "https://github.com/DontBeAfraidAnanda/devils-park-server.git",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prestart": "yarn build",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "dev:server": "nodemon --watch src --exec 'npx' 'ts-node' src/server.ts"
+  },
+  "dependencies": {
+    "@types/node": "^22.10.2",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
